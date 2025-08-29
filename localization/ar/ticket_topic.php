@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'GENERAL_INQUIRY' => 'استفسار عام',
+    'NETWORK_ERROR' => 'خطأ في الشبكة',
+    'USER_FAULT' => 'خطأ من المستخدم',
+    'EMPLOYEE_FAULT' => 'خطأ من الموظف',
+    'LOGIN_ISSUE' => 'مشكلة في تسجيل الدخول',
+    'DATA_INTEGRITY' => 'سلامة البيانات',
+    'PERFORMANCE_ISSUE' => 'مشكلة في الأداء',
+    'MODULE_REQUEST' => 'طلب وحدة جديدة',
+    'BILLING_ISSUE' => 'مشكلة في الفوترة',
+    'PERMISSIONS_ISSUE' => 'مشكلة في الصلاحيات',
+    'BUG_REPORT' => 'تبليغ عن خلل',
+    'FEATURE_REQUEST' => 'طلب ميزة جديدة',
+    'INTEGRATION_ISSUE' => 'مشكلة في التكامل',
+    'UI_UX_PROBLEM' => 'مشكلة في واجهة المستخدم أو تجربة الاستخدام',
+    'SECURITY_CONCERN' => 'مشكلة أمنية',
+    'DATABASE_ERROR' => 'خطأ في قاعدة البيانات',
+    'REPORTING_ISSUE' => 'مشكلة في التقارير',
+    'NOTIFICATION_PROBLEM' => 'مشكلة في الإشعارات',
+    'API_PROBLEM' => 'مشكلة في واجهة البرمجة (API)',
+    'CUSTOMIZATION_REQUEST' => 'طلب تخصيص',
+    'OTHER' => 'أخرى',
+];

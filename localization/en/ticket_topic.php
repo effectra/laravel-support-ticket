@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'GENERAL_INQUIRY' => 'General Inquiry',
+    'NETWORK_ERROR' => 'Network Error',
+    'USER_FAULT' => 'User Fault',
+    'EMPLOYEE_FAULT' => 'Employee Fault',
+    'LOGIN_ISSUE' => 'Login Issue',
+    'DATA_INTEGRITY' => 'Data Integrity Issue',
+    'PERFORMANCE_ISSUE' => 'Performance Issue',
+    'MODULE_REQUEST' => 'Module Request',
+    'BILLING_ISSUE' => 'Billing Issue',
+    'PERMISSIONS_ISSUE' => 'Permissions Issue',
+    'BUG_REPORT' => 'Bug Report',
+    'FEATURE_REQUEST' => 'Feature Request',
+    'INTEGRATION_ISSUE' => 'Integration Issue',
+    'UI_UX_PROBLEM' => 'UI/UX Problem',
+    'SECURITY_CONCERN' => 'Security Concern',
+    'DATABASE_ERROR' => 'Database Error',
+    'REPORTING_ISSUE' => 'Reporting Issue',
+    'NOTIFICATION_PROBLEM' => 'Notification Problem',
+    'API_PROBLEM' => 'API Problem',
+    'CUSTOMIZATION_REQUEST' => 'Customization Request',
+    'OTHER' => 'Other',
+];
