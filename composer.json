@@ -15,7 +15,8 @@
     }
   ],
   "require": {
-    "effectra/laravel-status": "^1.0"
+    "effectra/laravel-status": "^1.0",
+    "spatie/laravel-package-tools": "^1.92"
   },
   "minimum-stability": "stable",
   "require-dev": {
