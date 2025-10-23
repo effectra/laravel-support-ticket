@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Effectra\LaravelSupportTicket\Models;
 
 use Illuminate\Database\Eloquent\Model;

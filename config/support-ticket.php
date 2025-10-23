@@ -1,5 +1,6 @@
 <?php
 
+
 return [
     'tables' => [
         'tickets' => 'support_tickets',
@@ -8,17 +9,20 @@ return [
         'employees' => 'employees',
     ],
     'models' => [
-        'user' => \App\Models\User::class,
-        'employee' => \App\Models\User::class,
-        'ticket_response' => \Effectra\LaravelSupportTicket\Models\TicketResponse::class,
+        'models' => [
+            'user' => \App\Models\User::class,
+            'employee' => \App\Models\User::class,
+            'ticket_response' => Effectra\LaravelSupportTicket\Models\TicketResponse::class,
+        ],
+
     ],
     'localization' => [
-        'path' => __DIR__ . '/../localization/',
+        'path' => __DIR__ . '/resources/lang/',
     ],
     'default' => [
-        'status' => \Effectra\LaravelStatus\Enums\StatusEnum::PENDING,
-        'importance_level' => \Effectra\LaravelSupportTicket\Enums\TicketImportanceLevelEnum::LOW,
-        'topic' => \Effectra\LaravelSupportTicket\Enums\TicketTopicEnum::GENERAL_INQUIRY,
+        'status' => \Effectra\LaravelSupportTicket\Enums\TicketStatusEnum::PENDING->value,
+        'importance_level' => \Effectra\LaravelSupportTicket\Enums\TicketImportanceLevelEnum::LOW->value,
+        'topic' => \Effectra\LaravelSupportTicket\Enums\TicketTopicEnum::GENERAL_INQUIRY->value,
     ],
     'responder_type' => "\App\Models\User"
 ];

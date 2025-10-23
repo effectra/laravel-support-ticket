@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Effectra\LaravelBlog\Providers;
+namespace Effectra\LaravelSupportTicket\Providers;
 
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
@@ -18,6 +18,7 @@ final class LaravelSupportTicketServiceProvider extends PackageServiceProvider
                 'create_support_tickets_table',
                 'create_support_tickets_responses_table'
             ])
+            ->hasTranslations()
             ->hasInstallCommand(function (InstallCommand $command): void {
                 $command
                     ->publishConfigFile()

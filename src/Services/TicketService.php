@@ -1,6 +1,8 @@
 <?php
 
-namespace Effectra\SupportTicket\Services;
+declare(strict_types=1);
+
+namespace Effectra\LaravelSupportTicket\Services;
 
 use Effectra\LaravelModelOperations\Traits\UseCreate;
 use Effectra\LaravelModelOperations\Traits\UseModelDefinition;

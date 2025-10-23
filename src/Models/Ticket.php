@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Effectra\LaravelSupportTicket\Models;
 
 use Effectra\LaravelSupportTicket\Enums\TicketStatusEnum;
@@ -47,6 +49,7 @@ class Ticket extends Model
      * @var array<string, string>
      */
     protected $casts = [
+        'is_closed' => 'boolean',
         'status' => TicketStatusEnum::class,
         'importance_level' => TicketImportanceLevelEnum::class,
         'topic' => TicketTopicEnum::class,

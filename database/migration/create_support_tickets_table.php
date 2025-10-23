@@ -16,24 +16,25 @@ return new class extends Migration {
             $table->id();
             $table->string('title');
             $table->text('body');
-            
-            $table->enum('status', enumToArray(TicketStatusEnum::class));
-            $table->enum('importance_level', enumToArray(TicketImportanceLevelEnum::class));
-            $table->enum('topic', enumToArray(TicketTopicEnum::class));
-            
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('employee_id');
+
+            $table->enum('status', enumToArray(TicketStatusEnum::class))->default(config('support-ticket.default.status'));
+            $table->enum('importance_level', enumToArray(TicketImportanceLevelEnum::class))->default(config('support-ticket.default.importance_level'));
+            $table->enum('topic', enumToArray(TicketTopicEnum::class))->default(config('support-ticket.default.topic'));
+
+            $table->foreignId('user_id')->nullable()->constrained(config('support-ticket.tables.users', 'users'))->nullOnDelete();
+            $table->foreignId('employee_id')->nullable()->constrained(config('support-ticket.tables.employees', 'employees'))->nullOnDelete();
 
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on(config('support-ticket.tables.users'))->onDelete('cascade');
-            $table->foreign('employee_id')->references('id')->on(config('support-ticket.tables.employees'))->onDelete('cascade');
+            $table->softDeletes();
 
+            $table->index(['status', 'importance_level', 'topic']);
+            $table->index(['user_id']);
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists(config('support-ticket.tables.tickets'));
+       Schema::dropIfExists(config('support-ticket.tables.tickets', 'support_tickets'));
     }
 };
